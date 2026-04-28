@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" data-tab="home" class="active-link">Home</a>
+  <a href="#" data-tab="about">About</a>
+  <a href="#" data-tab="skills">Skills</a>
+  <a href="#" data-tab="projects">Projects</a>
+  <a href="#" data-tab="education">Education</a>
+  <a href="#" data-tab="contact">Contact</a>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="tab active">
+  <div class="profile">
+    <img src="img_portfolio.png" alt="My Photo">
+    
+    <h1>Esha Khapane</h1>
+    <p><strong>B.Tech - Electronics & Telecommunication Engineering</strong></p>
+
+    <p>First-Year ENTC Student | Exploring Electronics, Programming & Innovation</p>
+
+    <p>
+      Passionate about understanding electronic systems and building real-world projects. 
+      Currently learning C programming, circuit design, and microcontroller basics.
+    </p>
+
+    <p>
+      Interested in combining hardware and software to solve real-world problems.
+    </p>
+
+    <a href="https://www.tinkercad.com/things/kOh6saIoLz1-grand-kieran?sharecode=SQwTfpu-ZiXk9r7vIhbJRf7dlnS030eNatzcW222nKE" class="btn">View Projects simulations</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="tab">
+  <h2>About Me</h2>
+  <p>
+  I am a first-year B.Tech student in Electronics & Telecommunication Engineering at MIT Academy of Engineering, Pune. 
+I am deeply interested in understanding how electronic systems work and how software can be used to control hardware.
+</p>
+
+<p>
+I have started learning programming (C, Python) along with basic circuit design and web development. 
+I enjoy building small projects that combine both hardware and software.
+</p>
+
+<p>
+Currently, I am focusing on strengthening my fundamentals in electronics and exploring microcontrollers like Arduino.
+</p>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="tab">
+  <h2>Skills</h2>
+  <h3>Core Fundamentals</h3>
+<div class="card">Basic Electrical & Electronics</div>
+<div class="card">Circuit Analysis</div>
+
+<h3>Programming</h3>
+<div class="card">C Programming (Basics)</div>
+<div class="card">Python (Basics)</div>
+
+<h3>Hardware</h3>
+<div class="card">Breadboard Circuits</div>
+<div class="card">LED Interfacing</div>
+
+<h3>Web Development</h3>
+<div class="card">HTML</div>
+<div class="card">CSS</div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="tab">
+  <h2>Projects</h2>
+  <div class="card">
+  <h3>Door Lock System</h3>
+  <p>Developed a basic door lock system using microcontroller concepts and hardware components.</p>
+</div>
+
+<div class="card">
+  <h3>Patient Monitoring System (Simulation)</h3>
+  <p>Designed a simulation to monitor patient parameters using virtual tools.</p>
+</div>
+
+<div class="card">
+  <h3>AI Placement Guidance Website</h3>
+  <p>Built a simple web-based platform to guide students for placement preparation.</p>
+</div>
+</div>
+
+<!-- EDUCATION -->
+<div id="education" class="tab">
+  <h2>Education</h2>
+  <div class="card">
+  <h3>B.Tech in Electronics & Telecommunication Engineering</h3>
+  <p>MIT Academy of Engineering,alandi,Pune</p>
+  <p>2025 – 2029</p>
+  <p>Currently in First Year</p>
+  <p>CGPA: 8.2 (Semester 1)</p>
+</div>
+
+<div class="card">
+  <h3>Higher Secondary Certificate (HSC)</h3>
+  <p>Disha edupoint Junior College, Maharashtra Board</p>
+  <p>2023 – 2025</p>
+</div>
+
+<div class="card">
+  <h3>Secondary School Certificate (SSC)</h3>
+  <p>Little Angel high School, Maharashtra Board</p>
+  <p>Year: 2023</p>
+</div>
+</div>
+<div id="contact" class="tab">
+  <h2>Contact</h2>
+
+  <div class="card">
+    <strong>Email</strong><br>
+    <a href="mailto:eshakhapne2@gmail.com">eshakhapne2@gmail.com</a>
+  </div>
+
+  <div class="card">
+    <strong>Phone</strong><br>
+    +91 8237976512
+  </div>
+  <div class="card">
+    <strong>LinkedIn</strong><br>
+    <a href="https://https://www.linkedin.com/in/esha-khapne" target="_blank">https://www.linkedin.com/in/esha-khapne</a>
+  </div>
+
+</div>
+</body>
+<script>
+const tabs = document.querySelectorAll('nav a');
+const sections = document.querySelectorAll('.tab');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const tabId = this.getAttribute('data-tab');
+
+    // hide all sections
+    sections.forEach(sec => sec.classList.remove('active'));
+
+    // show selected section
+    document.getElementById(tabId).classList.add('active');
+
+    // remove active link
+    tabs.forEach(t => t.classList.remove('active-link'));
+
+    // highlight clicked tab
+    this.classList.add('active-link');
+  });
+});
+</script>
+</html>

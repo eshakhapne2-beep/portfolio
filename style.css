@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f1a;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+  background: #141427;
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+nav a:hover,
+.active-link {
+  color: white;
+}
+
+/* TAB SECTIONS */
+.tab {
+  display: none;
+  padding: 40px;
+  text-align: center;
+}
+
+.active {
+  display: block;
+}
+
+/* HOME */
+.profile img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+/* CARD STYLE */
+.card {
+  background: #1c1c2e;
+  padding: 20px;
+  margin: 15px auto;
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* BUTTON (you used in HTML, so added styling) */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #6c63ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #574bff;
+}
